@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class VehicleServices {
 
+    @Autowired    //inject dependency to interface
     private Speakers speakers;
     private Tires tires;
 
@@ -27,7 +28,7 @@ public class VehicleServices {
         return speakers;
     }
 
-    @Autowired
+
     public void setSpeakers(Speakers speakers) {
         this.speakers = speakers;
     }
@@ -36,7 +37,7 @@ public class VehicleServices {
         return tires;
     }
 
-    @Autowired
+    @Autowired   // we can also inject dependency in setter method
     public void setTires(Tires tires) {
         this.tires = tires;
     }
